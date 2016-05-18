@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4008860D1CEC587500459DE2 /* CityGuidesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4008860C1CEC587500459DE2 /* CityGuidesViewController.m */; };
+		400886101CEC5AA400459DE2 /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4008860F1CEC5AA400459DE2 /* FirstTableViewCell.m */; };
 		40263EFF1CBA626200D07F00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40263EFE1CBA626200D07F00 /* main.m */; };
 		40263F021CBA626200D07F00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40263F011CBA626200D07F00 /* AppDelegate.m */; };
 		40263F081CBA626200D07F00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40263F061CBA626200D07F00 /* Main.storyboard */; };
@@ -49,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4008860B1CEC587500459DE2 /* CityGuidesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityGuidesViewController.h; sourceTree = "<group>"; };
+		4008860C1CEC587500459DE2 /* CityGuidesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityGuidesViewController.m; sourceTree = "<group>"; };
+		4008860E1CEC5AA400459DE2 /* FirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewCell.h; sourceTree = "<group>"; };
+		4008860F1CEC5AA400459DE2 /* FirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewCell.m; sourceTree = "<group>"; };
 		40263EFA1CBA626200D07F00 /* iOSAnimationTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAnimationTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40263EFE1CBA626200D07F00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40263F001CBA626200D07F00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -237,6 +243,10 @@
 				40263F9E1CBB74B000D07F00 /* FillModeViewController.m */,
 				40263FA01CBB802100D07F00 /* PathAnimationViewController.h */,
 				40263FA11CBB802100D07F00 /* PathAnimationViewController.m */,
+				4008860B1CEC587500459DE2 /* CityGuidesViewController.h */,
+				4008860C1CEC587500459DE2 /* CityGuidesViewController.m */,
+				4008860E1CEC5AA400459DE2 /* FirstTableViewCell.h */,
+				4008860F1CEC5AA400459DE2 /* FirstTableViewCell.m */,
 			);
 			name = CABasicAnimationVC;
 			sourceTree = "<group>";
@@ -400,7 +410,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4008860D1CEC587500459DE2 /* CityGuidesViewController.m in Sources */,
 				40263FA21CBB802100D07F00 /* PathAnimationViewController.m in Sources */,
+				400886101CEC5AA400459DE2 /* FirstTableViewCell.m in Sources */,
 				40263F511CBA801B00D07F00 /* PGCardTableViewCell.m in Sources */,
 				40263F3D1CBA73E900D07F00 /* TransformViewController.m in Sources */,
 				40263F431CBA78CB00D07F00 /* MaskAnimationViewController.m in Sources */,

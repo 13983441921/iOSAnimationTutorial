@@ -15,6 +15,7 @@ static NSString * const kShowCellAnimation = @"kShowCellAnimation";
 static NSString * const kShowGroup = @"kShowGroup";
 static NSString * const kShowFillModeVC = @"kShowFillModeVC";
 static NSString * const kShowPath = @"kShowPath";
+static NSString * const kPushToCity = @"kPushToCity";
 
 @interface HomeTableViewController ()
 {
@@ -28,10 +29,9 @@ static NSString * const kShowPath = @"kShowPath";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    cellTitleArray = @[@"阴影动画", @"旋转动画", @"遮罩动画", @"Cell加载动画", @"路径动画", @"组动画", @"填充模式讲解"];
-    segueArray = @[kShowShadow, kShowTransform, kShowMask, kShowCellAnimation, kShowPath, kShowGroup, kShowFillModeVC];
+    cellTitleArray = @[@"阴影动画", @"旋转动画", @"遮罩动画", @"Cell加载动画", @"路径动画", @"组动画", @"填充模式讲解", @"City Guides"];
+    segueArray = @[kShowShadow, kShowTransform, kShowMask, kShowCellAnimation, kShowPath, kShowGroup, kShowFillModeVC,kPushToCity];
 
-   
 }
 
 - (void)didReceiveMemoryWarning {

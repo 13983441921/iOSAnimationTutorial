@@ -28,12 +28,13 @@ static CGFloat const kAnimationDuration = 1;
     animation.toValue = to;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
+   // animation.fillMode = kCAFillModeBackwards;
     return animation;
 }
 
 + (CABasicAnimation *)shadowOffsetAnimation:(BOOL)open {
     NSValue *fromValue = [NSValue valueWithCGSize:CGSizeMake(0, 0)];
-    NSValue *toValue = [NSValue valueWithCGSize:CGSizeMake(5, 5)];
+    NSValue *toValue = [NSValue valueWithCGSize:CGSizeMake(15, 15)];
     if (open) {
       return [CABasicAnimationDemo animationWithKeyPath:@"shadowOffset" duration:kAnimationDuration fromValue:fromValue toValue:toValue];
     }else{

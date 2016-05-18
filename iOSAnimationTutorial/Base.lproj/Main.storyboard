@@ -133,11 +133,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OYh-k7-yej" id="qpj-YJ-7EI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HoH-3I-ANt">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -161,11 +161,51 @@
                         <segue destination="phM-Bp-Z4V" kind="show" identifier="kShowTransform" id="hVz-zi-AYW"/>
                         <segue destination="ejg-7c-JZn" kind="show" identifier="kShowFillModeVC" id="3m9-tc-Hen"/>
                         <segue destination="5DK-jh-Zh1" kind="show" identifier="kShowPath" id="vI2-Oe-YNb"/>
+                        <segue destination="Lug-k3-dF4" kind="show" identifier="kPushToCity" id="QIQ-sa-ljH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5C-5B-2iL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-971" y="1653"/>
+        </scene>
+        <!--City Guides View Controller-->
+        <scene sceneID="bbC-CT-AqL">
+            <objects>
+                <viewController id="Lug-k3-dF4" customClass="CityGuidesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9WZ-M5-U1w"/>
+                        <viewControllerLayoutGuide type="bottom" id="PIS-Jt-5yT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OD3-le-eaB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CNq-2G-73r">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.15294117647058825" green="0.17254901960784313" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lug-k3-dF4" id="i5t-JQ-V8h"/>
+                                    <outlet property="delegate" destination="Lug-k3-dF4" id="RQZ-EC-wf7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PIS-Jt-5yT" firstAttribute="top" secondItem="CNq-2G-73r" secondAttribute="bottom" id="0oq-VR-RXJ"/>
+                            <constraint firstItem="CNq-2G-73r" firstAttribute="leading" secondItem="OD3-le-eaB" secondAttribute="leading" id="KqT-Ur-0WF"/>
+                            <constraint firstItem="CNq-2G-73r" firstAttribute="top" secondItem="OD3-le-eaB" secondAttribute="top" id="NVU-nI-nBy"/>
+                            <constraint firstAttribute="trailing" secondItem="CNq-2G-73r" secondAttribute="trailing" id="cMF-dn-7Wf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTableView" destination="CNq-2G-73r" id="I5O-ad-d2y"/>
+                        <outlet property="tableViewTopConstraint" destination="NVU-nI-nBy" id="hLq-Cn-4oq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VyC-WW-RvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1023" y="2672"/>
         </scene>
         <!--Sequence Animation View Controller-->
         <scene sceneID="MlL-Ya-Qkt">
@@ -289,7 +329,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PLE-Tv-QOd" id="FBZ-4L-Rl8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="86.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5th-row.png" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-kU-bx8">

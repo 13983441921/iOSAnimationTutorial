@@ -21,6 +21,8 @@
     [super viewDidLoad];
     [self setavatarImageViewShadow];
     
+   
+    
     // Do any additional setup after loading the view.
 }
 

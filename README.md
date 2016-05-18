@@ -55,7 +55,6 @@ iOS提供的默认kCAFillMode一共有四种
 
 如果看完还是不理解。Demo里的`FillModeViewController`文件是示例。  
 
-## CAKeyframeAnimation  
 
 Demo里的动画有这些。  
 ![](http://7xi4jm.com1.z0.glb.clouddn.com/animationCollection.gif)

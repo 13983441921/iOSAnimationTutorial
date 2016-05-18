@@ -22,12 +22,15 @@
     [super viewDidLoad];
     redView = [UIView new];
     redView.backgroundColor = [UIColor redColor];
-    redView.frame = CGRectMake(0, 0, 100, 100);
-    redView.center = CGPointMake(100, 100);
+    redView.frame = CGRectMake(50, 150, 100, 100);
+    
+  
+   // redView.center = CGPointMake(100, 200);
     [self.view addSubview:redView];
     
     [self setupAnimation];
     // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,13 +45,14 @@
 - (void)setupAnimation
 {
     NSValue *fromValue = [NSValue valueWithCGPoint:self.view.center];
-    NSValue *toValue = [NSValue valueWithCGPoint:CGPointZero];
+    NSValue *toValue = [NSValue valueWithCGPoint:CGPointMake(40, 40)];
     
     animation = [CABasicAnimation animationWithKeyPath:@"position"];
     animation.duration = 5;
     animation.fromValue = fromValue;
     animation.toValue = toValue;
-    animation.removedOnCompletion = NO;
+    animation.removedOnCompletion = YES;
+    animation.fillMode = kCAFillModeBackwards;
     
 }
 
@@ -63,7 +67,7 @@
      */
     [redView.layer removeAllAnimations];
     animation.fillMode = kCAFillModeBackwards;
-    animation.beginTime = CACurrentMediaTime() + 1;
+    animation.beginTime = CACurrentMediaTime() + 1.5;
     [redView.layer addAnimation:animation forKey:@"positionAnimation"];
 }
 
@@ -74,7 +78,18 @@
      */
     [redView.layer removeAllAnimations];
     animation.fillMode = kCAFillModeForwards;
+    animation.beginTime = CACurrentMediaTime()+1;
+    animation.delegate = self;
     [redView.layer addAnimation:animation forKey:@"positionAnimation"];
+    redView.center = CGPointMake(40, 40);
+    
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    if (flag) {
+        NSLog(@"red view rect is %@", NSStringFromCGRect(redView.frame));
+    }
 }
 /*
 #pragma mark - Navigation
